@@ -1,10 +1,12 @@
+import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+// import Auth from "@/components/Auth";
+
 
 export default function Home() {
   return (
     <div className="bg-accent">
-      <Button>hello</Button>
+      {/* <Auth/> */}
     </div>
-      );
+         );
 }
