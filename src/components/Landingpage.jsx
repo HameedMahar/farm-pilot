@@ -58,28 +58,9 @@ export default function Landingpage({
     <section className="relative w-full overflow-hidden bg-[#f1f2f4] font-[Manrope,ui-sans-serif,system-ui,sans-serif]">
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');`}</style>
 
-      {/* Faint dashed vertical guide lines */}
-      {["6%", "30%", "70%", "94%"].map((left, i) => (
-        <span
-          key={left}
-          aria-hidden="true"
-          className={`pointer-events-none absolute top-0 z-0 h-full w-px opacity-60 ${
-            i === 1 || i === 2 ? "hidden md:block" : ""
-          }`}
-          style={{
-            left,
-            backgroundImage:
-              "repeating-linear-gradient(to bottom, rgba(29,40,42,0.18) 0 5px, transparent 5px 10px)",
-          }}
-        />
-      ))}
 
       {/* Hero text */}
       <div className="relative z-10 mx-auto max-w-6xl px-6 pb-24 pt-16 text-center sm:pt-20 md:pt-24">
-        <Sparkle size={26} className="left-[10%] top-[14%] hidden sm:block" />
-        <Sparkle size={11} className="right-[17%] top-[18%] hidden sm:block" />
-        <Sparkle size={9} className="left-[24%] top-[52%] hidden md:block" />
-        <Sparkle size={15} className="right-[22%] top-[66%] hidden md:block" />
 
         {/* Badge */}
         <div className="inline-flex items-center gap-2 text-[11px] font-semibold text-[#1d282a]">
@@ -103,7 +84,7 @@ export default function Landingpage({
         {/* CTA */}
         <Link
           href={ctaHref}
-          className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#1d282a] px-7 py-3.5 text-[13px] font-semibold text-white shadow-[0_12px_28px_rgba(29,40,42,0.38)] transition-transform hover:-translate-y-0.5"
+          className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-[13px] font-semibold text-white shadow-[0_12px_28px_rgba(29,40,42,0.38)] transition-transform hover:-translate-y-0.5"
         >
           Get Started
           <ArrowRight />
@@ -115,7 +96,7 @@ export default function Landingpage({
         {image ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={image}
+            src={"/main.jpg"}
             alt="Farmland"
             className="absolute inset-0 h-full w-full object-cover"
           />
